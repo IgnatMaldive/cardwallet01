@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <title>Send BSV - Tique Case</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="./styles/sendbsv.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Courier+Prime:wght@400;700&family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div id="jigscon">
+        <div>Current Balance</div>
+        <div id="tokens">
+            <span id="tokenBalance"></span>
+        </div>
+        <div>Amount to Send</div>
+        <div>
+            <input type="number" id="sendamt" step="0.0001">
+        </div>
+        <div>Paymail / Address</div>
+        <div>
+            <input type="text" id='sendaddr'>
+        </div>
+        <div>
+            <a href="./index.html"><img src="./assets/back.svg" id="back"></a>
+            <button type="button" id="sendbsv">SEND</button>
+        </div>
+    </div>
+    <div class="check" id="confirm">
+        <a href="" id="confirmation" target="_blank" rel="noreferrer"><img src="./assets/check.svg"></a>
+    </div>
+
+
+
+</body>
+
+<script src="./scripts/bsv.browser.min.js"></script>
+<script src="./scripts/config.js"></script>
+<script src="./scripts/run.browser.min.js"></script>
+<script src="./scripts/idb.js"></script>
+<script src="./scripts/helpers.js"></script>
+<script src="./scripts/purse.js"></script>
+<script src="./scripts/sendbsv.js"></script>
+
+</html>
