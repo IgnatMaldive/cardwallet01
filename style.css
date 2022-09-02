@@ -3,26 +3,33 @@
 
 body{
   display: flex;
-  /* position: relative; */
+  position: relative;
   font-family: 'Roboto', sans-serif;
   /* justify-content: center; */
   justify-content: center;
   /* align-items: center;   */
-  
+  /* margin: 0px; */
 }
 
 
 * {
   box-sizing: border-box;
 }
+.column {
+  float: left;
+  width: 20%;
+}
 
-
-
-
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .floatingelement {
   /* text-align: center; */
-  
+  /* margin: 0px; */
   width: 350px;
   padding: 30px;
   height: 200px; /* Should be removed. Only for demonstration */
@@ -37,15 +44,25 @@ body{
 		0 16px 32px rgba(0,0,0,0.07), 
 		0 32px 64px rgba(0,0,0,0.07);
 }
-/* Clear floats after the columns */
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.satoshibalance{
+  position: relative;
+  left: 60px;
+  top: 10px;
+
 }
 
+.settingsicon{
+  position: relative;
+  left: 275px;
+  bottom: 162px;
+}
 
+.inputforms{
+  position: absolute;
+  top: 133px;
+
+}
 
 .emoji {
   position: relative;
@@ -54,10 +71,18 @@ body{
   width: 26px;
 }
 
-.p1 {
-  font-size: 0.875em; /* 14px/16=0.875em */
+.bsvreception {
+/* color: red; */
+position: absolute;
+font-size: small;
+top: 150px;
 }
+
 .button-4 {
+  text-decoration:none;
+  position: relative;
+  left: 130px;
+  align-items: flex-end;
   appearance: none;
   background-color: #FAFBFC;
   border: 1px solid rgba(27, 31, 35, 0.15);
@@ -112,4 +137,23 @@ body{
 
 .button-4:-webkit-details-marker {
   display: none;
+}
+
+.buttonshift{
+  position: relative;
+  left: 97.5px;
+}
+
+.settings{
+  position: relative;
+}
+.seedphrase{
+  position: absolute;
+  left: 220px;
+  color: grey;
+  top: -14px;
+}
+
+.bottommenu{
+  color: grey;
 }

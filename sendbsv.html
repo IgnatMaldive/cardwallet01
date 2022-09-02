@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="./manifest.json">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" type="text/css" href="./styles/sendbsv.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./styles/sendbsv.css"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link rel="stylesheet" href="style.css">
@@ -19,29 +19,33 @@
             <div class="column">
                 <div class="floatingelement" id="sendcard">
                     <div>send bsv</div>
-                    
+
                     <div id="jigscon">
 
-                        <div id="tokens">Balance: 
-                            <span id="tokenBalance"></span>
-                        </div>
-                        <br>
-                        <div>
-                            <input type="number" id="sendamt" placeholder="Amount to send" step="0.0001">
-                        </div>
 
-                        <div>
-                            <input type="text" id='sendaddr' placeholder="Paymail / Address">
+                        <div id="tokens">Balance:
+                            <span id="tokenBalance">...loading</span>
                         </div>
+                        <div class="inputforms">
+                            <div>
+                                <input type="number" id="sendamt" placeholder="Amount to send" step="0.0001" style="margin-bottom: 5px">
+                            </div>
+                            <div>
+                                <input type="text" id='sendaddr' placeholder="Paymail / Address">
+                            </div>
+                        </div>
+                        <br><br> <br> <br>
                         <div>
                             <a href="./index.html" class="button-4" id='cancelbtn'>Cancel</a>
                             &nbsp;&nbsp;
                             <button type="button" id="sendbsv" class="button-4">Send</button>
                         </div>
                     </div>
-                    <div class="check" id="confirm">
-                        <a href="" id="confirmation" target="_blank" rel="noreferrer"><img src="./assets/check.svg"></a>
+                    <div class="check" id="confirm" style="display: none;">
+                        <a href="" id="confirmation" target="_blank" rel="noreferrer"><img
+                                src="./assets/check.svg"></a>
                     </div>
+
                 </div>
             </div>
         </div>

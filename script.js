@@ -2,11 +2,12 @@
 
 var homecard =  document.getElementById("homecard");
 var receivecard =  document.getElementById("receivecard");
+var tokens = document.getElementById("tokens")
 
 
 
 receivecard.style = "display:none"
-// homecard.style = "display:none"
+homecard.style = "background-color:rgb(255, 255, 255);"
 
 
 // document.write(titular.getAttribute("cosita"))
@@ -40,4 +41,21 @@ backbtn.addEventListener("click", function(){
     receivecard.style = "display:none"
 
 })
+
+var settings = document.getElementById("settings");
+settings.addEventListener("click", function(){
+    homecard.style = "background-color:rgb(255, 255, 255);"
+    receivecard.style = "display:none"
+
+})
+
+var tokenbtn = document.getElementById("tokenbtn");
+tokenbtn.addEventListener("click", function(){
+    tokens.style = "background-color:rgb(255, 255, 255);"
+})
+
+
+
+
+
 

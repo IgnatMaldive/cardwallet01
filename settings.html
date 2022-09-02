@@ -1,107 +1,111 @@
 <html lang="en">
-    <head>
-        <title>Settings - Tique Case</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Tique Case"/>
-        <meta property="og:type" content="website">
-        <meta property="og:image:url" content="./assets/pwa-512x512.png">
-        <meta property="og:description" content="Settings - Your Keepsakes on Bitcoin">
-        <meta name="theme-color" content="#D3D3D3">
-        <meta name="description" content="Settings - Your Keepsakes on Bitcoin">
-        <meta name="apple-mobile-web-app-title" content="Tique Case">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="manifest" href="./manifest.json">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="apple-touch-icon" href="./assets/apple-touch-icon-180x180.png">
-        <link rel="icon" href="./assets/favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-        <!-- <link rel="stylesheet" type="text/css" href="./styles/settings.css"> -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Courier+Prime:wght@400;700&family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+
+<head>
+    <title>Settings - Tique Case</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Tique Case" />
+    <meta property="og:type" content="website">
+    <meta property="og:image:url" content="./assets/pwa-512x512.png">
+    <meta property="og:description" content="Settings - Your Keepsakes on Bitcoin">
+    <meta name="theme-color" content="#D3D3D3">
+    <meta name="description" content="Settings - Your Keepsakes on Bitcoin">
+    <meta name="apple-mobile-web-app-title" content="Tique Case">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon-180x180.png">
+    <link rel="icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <!-- <link rel="stylesheet" type="text/css" href="./styles/settings.css"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Courier+Prime:wght@400;700&family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
 
 
-        <div class="center">
-            <br><br><br>
-            <div class="row">
-                <div class="column">
-                    <div class="floatingelement" id="sendcard">
-                        <div>settings</div>
+    <div class="center">
+        <br><br><br>
+        <div class="row">
+            <div class="column">
+                <div class="floatingelement" id="sendcard">
+                    <div>settings</div>
+<br>
 
-
-                        <div class="page center">
-                            <div class="settings">
-                                <a href="./index.html"><img src="./assets/back.svg" class="back" id="back"></a>
-
+                    <div class="page center">
+                        <div class="settings">
+                            <div class = "seedphrase">
                                 <div class="box backup" id="backup">
-
-                                    <div class="seedText">Backup Seed Phrase</div>
+                                    <div class="seedText">Backup</div>
                                 </div>
                                 <div class="box restore" id="restore">
+                                    <div class="seedText">Restore</div>
+                                </div>
+                            </div>
+                            <div class="dropdown trust">
+                                <label for="trust">Trust:</label>
+                                <select required id="trust">
+                                    <option value="0">Default</option>
+                                    <option value="1">None</option>
+                                    <option value="2">All</option>
+                                </select>
+                            </div>
+                            <div class="dropdown api">
+                                <label for="api">API:</label>
+                                <select required id="api">
+                                    <option value="run">RUN</option>
+                                    <option value="whatsonchain">WhatsOnChain</option>
+                                </select>
+                            </div>
+                            <div class="dropdown spendlimit">
+                                <label for="spendlimit">Satoshis spending limit:</label>
+                                <input type="number" step="10000" class="limitinput" placeholder="100000" min=0
+                                    id="satsLimit">
+                                <button type="button" class="limitbtn" id="limitSet">Set</button>
+                            </div>
+                            <div class="entryCon" id="entryCon" style="display: none;">
+                                <textarea rows="4" cols="50" id="entry" class="entry" autocomplete="off"></textarea>
+                                <div class="restoreBtn" id="restorebtn">
+                                    <button class="jigsBtn" type="button" id="sendbsv">RESTORE</button>
+                                </div>
+                            </div>
 
-                                    <div class="seedText">Restore Seed Phrase</div>
+                            <div class="box transferOwner" id="oTransfer" style="display: none;">
+                                <div class="seedText">Transfer Jigs to Owner</div>
+                            </div>
+                            <div class="box transferPurse" id="pTransfer" style="display: none;">
 
-                                </div>
-                                <div class="dropdown trust">
-                                    <label for="trust">Trust:</label>
-                                    <select required id="trust">
-                                        <option value="0">Default</option>
-                                        <option value="1">None</option>
-                                        <option value="2">All</option>
-                                    </select>
-                                </div>
-                                <div class="dropdown api">
-                                    <label for="api">API:</label>
-                                    <select required id="api">
-                                        <option value="run">RUN</option>
-                                        <option value="whatsonchain">WhatsOnChain</option>
-                                    </select>
-                                </div>
-                                <div class="dropdown spendlimit">
-                                    <label for="spendlimit">Satoshis spending limit:</label>
-                                    <input type="number" step="10000" class="limitinput" placeholder="100000" min=0 id="satsLimit">
-                                    <button type="button" class="limitbtn" id="limitSet">Set</button>
-                                </div>
-                                <div class="entryCon" id="entryCon" style="display: none;">
-                                    <textarea rows="4" cols="50" id="entry" class="entry" autocomplete="off"></textarea>
-                                    <div class="restoreBtn" id="restorebtn">
-                                        <button class="jigsBtn" type="button" id="sendbsv">RESTORE</button>
-                                    </div>
-                                </div>
-
-                                <div class="box transferOwner" id="oTransfer" style="display: none;">
-                                    <div class="seedText">Transfer Jigs to Owner</div>
-                                </div>
-                                <div class="box transferPurse" id="pTransfer"style="display: none;">
-
-                                    <div class="seedText">Transfer Sats to Purse</div>
-                                </div>
-                                <!-- <div class="dropdown ownerpath">
+                                <div class="seedText">Transfer Sats to Purse</div>
+                            </div>
+                            <!-- <div class="dropdown ownerpath">
                                     <label for="ownerDerivation">Owner Derivation Path:</label>
                                     <input type="text" class="path" id="ownerDerivation" placeholder="m/44'/236'/0'/2/0"><br>
                                     <label for="purseDerivation">Purse Derivation Path:</label>
                                     <input type="text" class="path" id="purseDerivation" placeholder="m/44'/236'/0'/0/0">
                                     <button type="button" class="pathbtn" id="setPath">Set</button>
                                 </div> -->
-                            </div>
+                            <a href="./index.html"><img src="./assets/back.svg" class="back" id="back"></a>
                         </div>
-
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
 
 
-    </body>
-    <script src="./scripts/bsv.browser.min.js"></script>
-    <script src="./scripts/config.js"></script>
-    <script src="./scripts/bsv-mnemonic.min.js"></script>
-    <script src="./scripts/run.browser.min.js"></script>
-    <script src="./scripts/idb.js"></script>
-    <script src="./scripts/helpers.js"></script>
-    <script src="./scripts/purse.js"></script>
-    <script src="./scripts/settings.js"></script>
+</body>
+<script src="./scripts/bsv.browser.min.js"></script>
+<script src="./scripts/config.js"></script>
+<script src="./scripts/bsv-mnemonic.min.js"></script>
+<script src="./scripts/run.browser.min.js"></script>
+<script src="./scripts/idb.js"></script>
+<script src="./scripts/helpers.js"></script>
+<script src="./scripts/purse.js"></script>
+<script src="./scripts/settings.js"></script>
+
 </html>

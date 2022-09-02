@@ -23,18 +23,21 @@
             <br><br><br>
             <div class="row">
                 <div class="column">
-                    <div class="floatingelement" id="homecard">
+                    <div class="floatingelement" id="homecard" style="display: none;">
                         <div>bsv wallet</div>
                         <!--PAGE  Bitcoin-->
                         <div id='page-three'>
-                            <div class="section-prim">
+                            <div class="satoshibalance">
                                 <div>
-                                    <div>
-                                        <span>Balance:</span>
-                                        <span id="bsvBalance"></span>
-                                    </div>
+                                    <span>Balance:</span>
+                                    <span id="bsvBalance">...loading</span>
+                                </div>
+                                <div>
+                                    <span>Satoshi</span>
+                                    <span id="satoshiBalance"></span>
                                 </div>
                             </div>
+
                             <br><br><br>
                             <div>
                                 <button id="receivebtn" class="button-4">Receive</button>
@@ -42,6 +45,9 @@
                                 <a href="./sendbsv.html" class="button-4" id='sendbsv'>Send</a>
                             </div>
                         </div>
+                        <a href="./settings.html">
+                            <img id="settings" src='./assets/settings-24px.svg' class="settingsicon">
+                        </a>
                     </div>
                 </div>
 
@@ -51,76 +57,84 @@
                     <div class="floatingelement" id="receivecard">
                         <div>receive bsv</div>
 
-                            <p1> <span class='font-sec adrs' id="purseAddr"></span></p1>
-                            <!-- <i class="fas fa-qrcode fa-lg qrcode"></i>
+                        <div class="bsvreception" id="purseAddr"></div>
+                        <!-- <i class="fas fa-qrcode fa-lg qrcode"></i>
                                  <i class="far fa-copy fa-lg copyadrs" onclick='showtooltip(this)' id="pcopyAddr">
                                  <span class="tooltip font-prim">Copied</span>
                                  </i> -->
 
 
-                        <br><br><br><br>
-                        <button id="backbtn" class="button-4">Back</button>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-            <!--PAGE JIG-->
-            <div id='page-one'>
-                <!-- <h1 class='title'>Jig</h1> -->
-                <div class='section-prim'>
-                    <div class='center topimg'>
-
-                    </div>
-                </div>
-                <div class='belt'>
-                    <div>
-                        <br><br>
-                        <p class='font-prim'>Receive NFTs & Tokens:
-                            <br><span class='font-sec adrs' id="ownerAddr"></span>
-                            <!-- <i class="fas fa-qrcode fa-lg qrcode"></i>
-                    <i class="far fa-copy fa-lg copyadrs" onclick='showtooltip(this)' id="ocopyAddr">
-                        <span class="tooltip font-prim">Copied</span>
-                    </i> -->
-                        </p>
-                    </div>
-                </div>
-                <div class='section-sec'>
-                    <!-- <input class="searchbar font-prim" type="text" id="nftSearch" onkeyup="search(this.id)" placeholder="Search"
-                onclick="expand(this)"> -->
-                    <div id="nftlist">
-                        <div id="loading">
-
+                        <br><br><br><br><br>
+                        <div class="buttonshift">
+                            <button id="backbtn" class="button-4">Back</button>
                         </div>
                     </div>
                 </div>
+
+
             </div>
-            <!--PAGE  Token-->
-            <div id='page-two'>
-                <!-- <h1 class='title'>Token</h1> -->
-                <div class='section-prim'>
-                    <div class='center topimg'>
-                    </div>
+            <br><br>
+
+            <div class="row">
+                <div class="bottommenu">
+                    <div id="tokenbtn" class="column">Tokens</div>
+                    <div class="column">Games</div>
                 </div>
 
-                <div class='belt'>
-                    <div>
-                        <p style="display: none;" class='font-prim'>Receive Tokens:
-                            <span class='font-sec adrs' id="tokenAddr"></span>
-                            <!-- <i class="fas fa-qrcode fa-lg qrcode"></i>
+
+            </div>
+
+            <!--PAGE JIG-->
+            <div id="tokens" style="display: none;">
+                <div id='page-one'>
+                    <!-- <h1 class='title'>Jig</h1> -->
+                    <div class='belt'>
+                        <div>
+
+                            <p class='font-prim'>Token address:
+                                <br><span class='font-sec adrs' id="ownerAddr"></span>
+                                <!-- <i class="fas fa-qrcode fa-lg qrcode"></i>
+                    <i class="far fa-copy fa-lg copyadrs" onclick='showtooltip(this)' id="ocopyAddr">
+                        <span class="tooltip font-prim">Copied</span>
+                    </i> -->
+                            </p>
+                        </div>
+                    </div>
+                    <div class='section-sec'>
+                        <!-- <input class="searchbar font-prim" type="text" id="nftSearch" onkeyup="search(this.id)" placeholder="Search"
+                onclick="expand(this)"> -->
+                        <div id="nftlist">
+                            <div id="loading">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PAGE  Token-->
+                <div id='page-two'>
+                    <!-- <h1 class='title'>Token</h1> -->
+                    <div class='section-prim'>
+                        <div class='center topimg'>
+                        </div>
+                    </div>
+
+                    <div class='belt'>
+                        <div>
+                            <p style="display: none;" class='font-prim'>Receive Tokens:
+                                <span class='font-sec adrs' id="tokenAddr"></span>
+                                <!-- <i class="fas fa-qrcode fa-lg qrcode"></i>
                     <i class="far fa-copy fa-lg copyadrs" onclick='showtooltip(this)' id="tcopyAddr">
                         <span class="tooltip font-prim">Copied</span>
                     </i> -->
-                        </p>
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <div class='section-sec'>
-                    <input style="display: none;" class="searchbar font-prim" type="text" id="tokenSearch"
-                        onkeyup="search(this.id)" placeholder="Search" onclick="expand(this)">
-                    <div class='cardlist font-sec' id="tokenlist"></div>
+                    <div class='section-sec'>
+                        <input style="display: none;" class="searchbar font-prim" type="text" id="tokenSearch"
+                            onkeyup="search(this.id)" placeholder="Search" onclick="expand(this)">
+                        <div class='cardlist font-sec' id="tokenlist"></div>
+                    </div>
                 </div>
             </div>
 
@@ -173,6 +187,8 @@
                 </div>
             </div>
         </div>
+        <br>
+
 
         <script>
             var script;
@@ -205,6 +221,7 @@
         <script src="./scripts/history.js" defer></script>
         <script src="./scripts/wallet.js" defer></script>
         <script src="script.js"></script>
+        <script src="./scripts/kit.js"></script>
     </div>
 </body>
 

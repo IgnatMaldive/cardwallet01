@@ -180,7 +180,7 @@ if (script) {
 }
 else {
     document.getElementById('loading').style.display = 'inline-block';
-    if (localStorage.getItem('hasBackedUp') === 'false') {alert('Please backup your wallet!')}
+    if (localStorage.getItem('hasBackedUp') === 'false') {}                // alert('Please backup your wallet!')
     initRun();
     initWallet();
 }
