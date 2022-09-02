@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Generating QR Code</title>
+    <!-- Reference the qrcode library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <!-- Create a container for the QR code -->
+    <div id="qrcode-container"></div>
+    <!-- A button that is used to create QR code -->
+    <button id="create-qrcode">CREATE QR Code</button>
+  </body>
+  <script>
+    // Create QR code when button is clicked
+    document.getElementById("create-qrcode").addEventListener("click", () => {
+      // new QRCode(Target container, text to encode)
+      var qrc = new QRCode(
+        document.getElementById("qrcode-container"),
+        "https://www.wissamfawaz.com/index.htm"
+      );
+    });
+  </script>
+</html>

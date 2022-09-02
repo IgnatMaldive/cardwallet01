@@ -60,8 +60,33 @@ body{
 
 .inputforms{
   position: absolute;
-  top: 133px;
+  top: 130px;
 
+}
+
+.inputforms2{
+  position: relative;
+  top: -17px;
+
+}
+
+.sendtoken{
+  position: relative;
+  top: -10px;
+
+}
+
+.qr{
+  position: absolute;
+  top: 60px;
+  left: 550;
+  color: red;
+}
+
+.qrshift{
+  position: relative;
+  left: 0px;
+  top: -15px;
 }
 
 .emoji {
@@ -75,7 +100,14 @@ body{
 /* color: red; */
 position: absolute;
 font-size: small;
-top: 150px;
+top: 65px;
+left: -5px;
+}
+
+.receptionshift{
+  position: relative;
+  left: 5px;
+  top: -50px;
 }
 
 .button-4 {
@@ -144,6 +176,17 @@ top: 150px;
   left: 97.5px;
 }
 
+.buttonshift2{
+  position: absolute;
+  top: 89px;
+}
+
+.buttonshift3{
+  position: absolute;
+  top: 76px;
+  left: 97;
+}
+
 .settings{
   position: relative;
 }
@@ -154,6 +197,14 @@ top: 150px;
   top: -14px;
 }
 
+.dropdowns{
+  position: absolute;
+  left: 10px;
+}
+
+
+
 .bottommenu{
   color: grey;
 }
+

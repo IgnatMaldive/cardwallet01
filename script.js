@@ -7,7 +7,7 @@ var tokens = document.getElementById("tokens")
 
 
 receivecard.style = "display:none"
-homecard.style = "background-color:rgb(255, 255, 255);"
+homecard.style = "block"
 
 
 // document.write(titular.getAttribute("cosita"))
@@ -49,13 +49,35 @@ settings.addEventListener("click", function(){
 
 })
 
+
+
+function myFunction() {
+    if (tokens.style.display === "none") {
+        tokens.style.display = "block";
+    } else {
+        tokens.style.display = "none";
+    }
+  }
+
 var tokenbtn = document.getElementById("tokenbtn");
-tokenbtn.addEventListener("click", function(){
-    tokens.style = "background-color:rgb(255, 255, 255);"
+tokenbtn.addEventListener("click", myFunction)
+
+
+
+// new QRCode(document.getElementById("qrcode"), "133vAzJYBK1PGN33d1VbjQw23SVZ9ByTqr");
+
+
+
+
+var qrcontainer = document.getElementById("qrcode-container")
+
+var qrcode = new QRCode(qrcontainer, {
+    text: "133vAzJYBK1PGN33d1VbjQw23SVZ9ByTqr",
+    width: 80,
+    height: 80,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
 })
-
-
-
-
-
-
+// elem.src = qrcode;
+// document.getElementById("qrcode2").appendChild(elem);

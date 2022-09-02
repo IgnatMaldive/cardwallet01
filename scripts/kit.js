@@ -37,9 +37,20 @@ var purseSats = localStorage.getItem('purseSats');
 // document.write(minfo)
 
 
+
 var satoshiBalance =  document.getElementById("satoshiBalance");
-var saldosatoshi = purseSats*100000000;
-satoshiBalance.innerHTML=Math.round(saldosatoshi)
+var saldosatoshi = Math.round(purseSats*100000000);
+
+
+
+const formatter = Intl.NumberFormat('en', )
+
+var saldosatoshiformat = formatter.format(saldosatoshi)
+
+satoshiBalance.innerHTML=saldosatoshiformat
+
+
+
 
 
 // var depositAddress =  document.getElementById("depositAddress");

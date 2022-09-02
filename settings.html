@@ -34,11 +34,11 @@
             <div class="column">
                 <div class="floatingelement" id="sendcard">
                     <div>settings</div>
-<br>
+                    <br>
 
                     <div class="page center">
                         <div class="settings">
-                            <div class = "seedphrase">
+                            <div class="seedphrase">
                                 <div class="box backup" id="backup">
                                     <div class="seedText">Backup</div>
                                 </div>
@@ -46,22 +46,25 @@
                                     <div class="seedText">Restore</div>
                                 </div>
                             </div>
-                            <div class="dropdown trust">
-                                <label for="trust">Trust:</label>
-                                <select required id="trust">
-                                    <option value="0">Default</option>
-                                    <option value="1">None</option>
-                                    <option value="2">All</option>
-                                </select>
+                            <div class="dropdowns">
+                                <div>
+                                    <label for="trust">Trust:</label>
+                                    <select required id="trust">
+                                        <option value="0">Default</option>
+                                        <option value="1">None</option>
+                                        <option value="2">All</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div>
+                                    <label for="api">API:</label>
+                                    <select required id="api">
+                                        <option value="run">RUN</option>
+                                        <option value="whatsonchain">WhatsOnChain</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="dropdown api">
-                                <label for="api">API:</label>
-                                <select required id="api">
-                                    <option value="run">RUN</option>
-                                    <option value="whatsonchain">WhatsOnChain</option>
-                                </select>
-                            </div>
-                            <div class="dropdown spendlimit">
+                            <div class="dropdown spendlimit" style="display: none;">
                                 <label for="spendlimit">Satoshis spending limit:</label>
                                 <input type="number" step="10000" class="limitinput" placeholder="100000" min=0
                                     id="satsLimit">
@@ -88,7 +91,9 @@
                                     <input type="text" class="path" id="purseDerivation" placeholder="m/44'/236'/0'/0/0">
                                     <button type="button" class="pathbtn" id="setPath">Set</button>
                                 </div> -->
-                            <a href="./index.html"><img src="./assets/back.svg" class="back" id="back"></a>
+                            <div class="buttonshift3">
+                                <a href="./index.html"><button class="button-4">Back</button></a>
+                            </div>
                         </div>
                     </div>
 
