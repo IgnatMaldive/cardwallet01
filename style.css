@@ -65,9 +65,9 @@ body{
 }
 
 .inputforms2{
-  position: relative;
-  top: -17px;
-
+  position: absolute;
+  top: 60px;
+  /* display: none; */
 }
 
 .sendtoken{
@@ -75,12 +75,29 @@ body{
   top: -10px;
 
 }
+.tokeninfo{
+  position: absolute;
+  left: 110px; 
+  top: 5px
+}
+
+.wrapper{
+  position: absolute;
+  width: 350px;
+}
+
+.tokenname{
+  position: relative;
+  top: -5px;
+  left: 0px;
+
+}
+
 
 .qr{
   position: absolute;
   top: 60px;
   left: 550;
-  color: red;
 }
 
 .qrshift{
@@ -208,3 +225,8 @@ left: -5px;
   color: grey;
 }
 
+.tokenwidth{
+   max-width: 350px;  
+  /* font-size: smaller; */
+
+}

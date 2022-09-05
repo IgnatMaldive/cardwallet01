@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Tique Case</title>
+    <title>bsv wallet</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="./manifest.json">
@@ -88,55 +88,57 @@
             </div>
 
             <!--PAGE JIG-->
-            <div id="tokens" style="display: none;">
-                <div id='page-one'>
-                    <!-- <h1 class='title'>Jig</h1> -->
-                    <div class='belt'>
-                        <div>
+            <div class="tokenwidth" >
+                <div id="tokens" style="display: none;">
+                    <div id='page-one'>
+                        <!-- <h1 class='title'>Jig</h1> -->
+                        <div class='belt'>
+                            <div>
 
-                            <p class='font-prim'>Token address:
-                                <br><span class='font-sec adrs' id="ownerAddr"></span>
-                                <!-- <i class="fas fa-qrcode fa-lg qrcode"></i>
+                                <p class='font-prim'>Token address:
+                                    <br><span class='font-sec adrs' id="ownerAddr"></span>
+                                    <!-- <i class="fas fa-qrcode fa-lg qrcode"></i>
                     <i class="far fa-copy fa-lg copyadrs" onclick='showtooltip(this)' id="ocopyAddr">
                         <span class="tooltip font-prim">Copied</span>
                     </i> -->
-                            </p>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class='section-sec'>
-                        <!-- <input class="searchbar font-prim" type="text" id="nftSearch" onkeyup="search(this.id)" placeholder="Search"
+                        <div class='section-sec'>
+                            <!-- <input class="searchbar font-prim" type="text" id="nftSearch" onkeyup="search(this.id)" placeholder="Search"
                 onclick="expand(this)"> -->
-                        <div id="nftlist">
-                            <div id="loading">
+                            <div id="nftlist">
+                                <div id="loading">
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--PAGE  Token-->
-                <div id='page-two'>
-                    <!-- <h1 class='title'>Token</h1> -->
-                    <div class='section-prim'>
-                        <div class='center topimg'>
+                    <!--PAGE  Token-->
+                    <div id='page-two'>
+                        <!-- <h1 class='title'>Token</h1> -->
+                        <div class='section-prim'>
+                            <div class='center topimg'>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class='belt'>
-                        <div>
-                            <p style="display: none;" class='font-prim'>Receive Tokens:
-                                <span class='font-sec adrs' id="tokenAddr"></span>
-                                <!-- <i class="fas fa-qrcode fa-lg qrcode"></i>
+                        <div class='belt'>
+                            <div>
+                                <p style="display: none;" class='font-prim'>Receive Tokens:
+                                    <span class='font-sec adrs' id="tokenAddr"></span>
+                                    <!-- <i class="fas fa-qrcode fa-lg qrcode"></i>
                     <i class="far fa-copy fa-lg copyadrs" onclick='showtooltip(this)' id="tcopyAddr">
                         <span class="tooltip font-prim">Copied</span>
                     </i> -->
-                            </p>
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class='section-sec'>
-                        <input style="display: none;" class="searchbar font-prim" type="text" id="tokenSearch"
-                            onkeyup="search(this.id)" placeholder="Search" onclick="expand(this)">
-                        <div class='cardlist font-sec' id="tokenlist"></div>
+                        <div class='section-sec'>
+                            <input style="display: none;" class="searchbar font-prim" type="text" id="tokenSearch"
+                                onkeyup="search(this.id)" placeholder="Search" onclick="expand(this)">
+                            <div class='cardlist font-sec' id="tokenlist"></div>
+                        </div>
                     </div>
                 </div>
             </div>

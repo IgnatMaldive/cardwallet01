@@ -1,87 +1,86 @@
 <html lang="en">
 
 <head>
-    <title>Send Jigs - Tique Case</title>
+    <title>Send NFTs / Tokens </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Tique Case" />
-    <meta property="og:type" content="website">
-    <meta property="og:image:url" content="./assets/pwa-512x512.png">
-    <meta property="og:description" content="Send Jigs - Your Keepsakes on Bitcoin">
-    <meta name="theme-color" content="#D3D3D3">
-    <meta name="description" content="Send Jigs - Your Keepsakes on Bitcoin">
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="@cryptoacorns" />
-    <meta name="twitter:image" content="https://tique.run/assets/pwa-512x512.png" />
-    <meta name="apple-mobile-web-app-title" content="Tique Case">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <link rel="manifest" href="./manifest.json">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="apple-touch-icon" href="./assets/apple-touch-icon-180x180.png">
-    <link rel="icon" href="./favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-    <link rel="stylesheet" type="text/css" href="./styles/send.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Courier+Prime:wght@400;700&family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="./styles/send.css"> -->
+    <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
+
 
     <div class="center">
         <br><br><br>
         <div class="row">
             <div class="column">
-                <div class="floatingelement">
-                    <div>send tokens</div>
+                <div class="jigs">
+                    <div class="floatingelement">
+                        <div id="jigscon">
+                            <div class="wrapper">
 
-                    <div id="jigscon">
-
-                        <div class="sendtoken">
-                            <div id="tokens">
-                                <p>
-                                    <span class="emoji" id="img"></span>
-                                    <span id="contractName"></span>
-                                    <span id="tokenBalance"></span>
-                                </p>
-                            </div>
-
-                            <div class="check" id="confirm">
-                                <a href="" id="confirmation" target="_blank" rel="noreferrer"><img
-                                        src="./assets/check.svg"></a>
-                            </div>
-                            <div class="inputforms2">
-                                <div id="tokenamt">
+                                <div>Send token</div>
+                                
+                                <div id="tokens" class="tokeninfo">
+                                    <span id="img"></span>
+                                    <span id="contractName" class="tokenname"></span>
                                     <div>
-                                        <input type="number" id="sendamt" placeholder="Amount to Send"
-                                            style="margin-bottom: 5px">
+                                        <span id="tokenBalance"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="inputforms2">
+                                    <div id="tokenamt" style="display:none">
+                                        <div>
+                                            <input type="number" id="sendamt" placeholder="Amount to send" step="0.0001"
+                                                style="margin-bottom: 5px">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <input type="text" id='sendaddr' placeholder="Paymail / Address">
                                     </div>
                                 </div>
-
+                                <br><br><br><br><br>
                                 <div>
-                                    <input type="text" id='sendaddr' placeholder="Address / Paymail">
+
+                                    <a href="./index.html" class="button-4" id='cancelbtn'>Cancel</a>
+                                    &nbsp;&nbsp;
+                                    <button id="sendjig" class="button-4">SEND</button>
                                 </div>
                             </div>
-                            <br><br><br><br><br>
-                            <div class="buttonshift2">
-                                <a href="./index.html" class="button-4" id='cancelbtn'>Cancel</a>
-                                &nbsp;&nbsp;
-                                <button type="button" class="button-4" id="sendjig">SEND</button>
-                            </div>
+
                         </div>
-                        <!-- <button class="jigsBtn burnbtn center" type="button" id="burnjig">BURN</button> -->
+
+                        <div class="check" id="confirm" style="display:none">
+                            <div>Sent!</div>
+
+                            <a href="" id="confirmation" target="_blank" rel="noreferrer">
+                                <img src="./assets/check.svg">
+                            </a>
+
+                            <a href="./index.html" class="button" id='homebtn'>Back</a>
+
+
+                        </div>
+
+
                     </div>
-
-
                 </div>
+
             </div>
         </div>
     </div>
 
-
+    </div>
 </body>
+
 <script src="./scripts/bsv.browser.min.js"></script>
 <script src="./scripts/config.js"></script>
 <script src="./scripts/run.browser.min.js"></script>
