@@ -204,6 +204,29 @@ left: -5px;
   left: 97;
 }
 
+.buttonshift4{
+  position: relative;
+  top: -10px;
+  left: 23;
+}
+
+.buttonshift5{
+  position: relative;
+  top: 97.5px;
+  left: 97;
+}
+
+.buttonshift6{
+  position: relative;
+  top: -30px;
+  left: 35px;
+}
+
+.tickshift{
+  position: relative;
+  top: -45px;
+  left: 70;
+}
 .settings{
   position: relative;
 }
@@ -228,5 +251,19 @@ left: -5px;
 .tokenwidth{
    max-width: 350px;  
   /* font-size: smaller; */
+
+}
+
+
+.sentconfirmation{
+
+  position: relative;
+  left: 60px;
+}
+
+.seedformat{
+position: relative;
+top: 200px;
+  
 
 }
