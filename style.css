@@ -222,6 +222,12 @@ left: -5px;
   left: 35px;
 }
 
+.buttonshift7{
+  position: relative;
+  top: 5px;
+  left: 89px;
+}
+
 .tickshift{
   position: relative;
   top: -45px;
@@ -266,4 +272,47 @@ position: relative;
 top: 200px;
   
 
+}
+
+.gamestage{
+  position: relative;
+
+  top: 250px;
+  left: 0px;
+
+}
+
+.characterinfo{
+  position: relative;
+
+  top: 5px;
+  left: 100px;
+
+}
+
+.spritewrapper{
+position: absolute;
+
+}
+.sprite{
+
+  position: absolute;
+
+  top: -57px;
+  left: 30px;
+  width: 50px;
+}
+
+
+.characteristics{
+
+  color: grey;
+  font-size: smaller;
+}
+
+.gameprompt{
+
+  position: absolute;
+
+  top: 280px;
 }
